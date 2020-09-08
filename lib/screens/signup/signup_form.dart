@@ -186,11 +186,11 @@ class _SignUpFormState extends State<SignUpForm> {
     );
   }
 
-  // @override
-  // void dispose() {
-  //   passwordTextEditingController.dispose();
-  //   emailTextEditingController.dispose();
+  @override
+  void dispose() {
+    passwordTextEditingController.dispose();
+    emailTextEditingController.dispose();
 
-  //   super.dispose();
-  // }
+    super.dispose();
+  }
 }

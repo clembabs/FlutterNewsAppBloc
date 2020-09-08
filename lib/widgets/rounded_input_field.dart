@@ -34,6 +34,7 @@ class _RoundedInputFieldState extends State<RoundedInputField> {
       child: TextFormField(
         controller: widget.controller,
         autovalidate: true,
+        autocorrect: false,
         validator: widget.validator,
         cursorColor: kPrimaryColor,
         decoration: InputDecoration(
