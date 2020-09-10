@@ -7,9 +7,9 @@ abstract class AuthenticationState extends Equatable {
   List<Object> get props => [];
 }
 
-class Uninitialized extends AuthenticationState {
+class AuthenticationInitial extends AuthenticationState {
   @override
-  String toString() => 'Uninitialized';
+  String toString() => 'AuthenticationInitial';
 }
 
 class Authenticated extends AuthenticationState {

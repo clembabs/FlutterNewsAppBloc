@@ -18,7 +18,7 @@ class SignUpState {
       @required this.isFailure});
 
   //initial state
-  factory SignUpState.empty() {
+  factory SignUpState.initial() {
     return SignUpState(
       isEmailValid: true,
       isPasswordValid: true,

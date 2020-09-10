@@ -7,10 +7,9 @@ import 'package:newsapp_bloc/bloc/news/bloc.dart';
 import 'package:newsapp_bloc/model/article.dart';
 import 'package:newsapp_bloc/screens/news/news_details.dart';
 import 'package:newsapp_bloc/widgets/loading.dart';
-import 'package:transparent_image/transparent_image.dart';
 
 class NewsPage extends StatefulWidget {
-  final FirebaseUser user;
+  final User user;
 
   const NewsPage({Key key, this.user}) : super(key: key);
 
@@ -19,8 +18,8 @@ class NewsPage extends StatefulWidget {
 }
 
 class _NewsPageState extends State<NewsPage> {
-  final NewsBloc _newsBloc = NewsBloc();
-  final NewsBloc _bloc = NewsBloc();
+  final NewsBloc _newsBloc = NewsBloc(NewsInitial());
+  final NewsBloc _bloc = NewsBloc(NewsInitial());
   bool loading = false;
 
   @override

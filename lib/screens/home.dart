@@ -4,7 +4,6 @@ import 'package:newsapp_bloc/bloc/authentication/bloc.dart';
 import 'package:newsapp_bloc/repository/UserRepository.dart';
 import 'package:newsapp_bloc/screens/login/login.dart';
 import 'package:newsapp_bloc/screens/news/news_page.dart';
-import 'package:newsapp_bloc/screens/signup/signup.dart';
 import 'package:newsapp_bloc/screens/splash.dart';
 import 'package:newsapp_bloc/widgets/constants.dart';
 
@@ -27,7 +26,7 @@ class Home extends StatelessWidget {
           scaffoldBackgroundColor: Colors.white),
       home: BlocBuilder<AuthenticationBloc, AuthenticationState>(
         builder: (context, state) {
-          if (state is Uninitialized) {
+          if (state is AuthenticationInitial) {
             return Splash();
           }
           if (state is Unauthenticated) {

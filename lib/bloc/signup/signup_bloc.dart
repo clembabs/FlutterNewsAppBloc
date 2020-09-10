@@ -11,10 +11,8 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
 
   SignUpBloc({@required UserRepository userRepository})
       : assert(userRepository != null),
-        _userRepository = userRepository;
-
-  @override
-  SignUpState get initialState => SignUpState.empty();
+        _userRepository = userRepository,
+        super(SignUpState.initial());
 
   @override
   Stream<Transition<SignUpEvent, SignUpState>> transformEvents(

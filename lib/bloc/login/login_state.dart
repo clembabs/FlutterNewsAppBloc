@@ -18,7 +18,7 @@ class LoginState {
       @required this.isFailure});
 
   //initial state
-  factory LoginState.empty() {
+  factory LoginState.initial() {
     return LoginState(
       isEmailValid: true,
       isPasswordValid: true,

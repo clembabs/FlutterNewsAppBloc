@@ -99,6 +99,4 @@ class _NewsDetailState extends State<NewsDetail> {
       ]),
     );
   }
-
-  Widget _buildLoading() => Center(child: CircularProgressIndicator());
 }

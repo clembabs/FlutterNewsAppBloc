@@ -4,7 +4,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:newsapp_bloc/bloc/signup/bloc.dart';
 import 'package:newsapp_bloc/repository/UserRepository.dart';
 import 'package:newsapp_bloc/screens/signup/signup_form.dart';
-import 'package:newsapp_bloc/widgets/constants.dart';
 
 class SignUp extends StatelessWidget {
   final UserRepository _userRepository;

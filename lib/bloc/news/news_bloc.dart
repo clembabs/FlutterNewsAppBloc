@@ -5,7 +5,8 @@ import 'package:newsapp_bloc/repository/NewsRepository.dart';
 class NewsBloc extends Bloc<NewsEvent, NewsState> {
   final ApiRepository _apiRepository = ApiRepository();
 
-  @override
+  NewsBloc(NewsState initialState) : super(initialState);
+
   NewsState get initialState => NewsInitial();
   @override
   Stream<NewsState> mapEventToState(
@@ -28,7 +29,7 @@ class NewsBloc extends Bloc<NewsEvent, NewsState> {
         yield NewsLoading();
         final nList = await _apiRepository.getEverything();
         yield NewsLoaded(nList);
-        if (nList.error != null && nList.error !=null) {
+        if (nList.error != null && nList.error != null) {
           yield NewsError(nList.error);
         }
       } on NetworkError {
