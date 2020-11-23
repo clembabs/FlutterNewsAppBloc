@@ -2,8 +2,7 @@
 
 <b>Flutter News App using BloC state management</b>, 
 Used <a href="newsapi.org">NewsAPI </a> as API to fetch news data, 
-Also used <b>Firebase</b> for Signup and Login authentication,
-Firebase is good
+Also used <b>Firebase</b> for Signup and Login authentication
 
 ## Screenshots
 <h2>LOGIN</h2>
